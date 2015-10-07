@@ -1,0 +1,9 @@
+-# All questions of a survey: http://www.socialresearchmethods.net/kb/questype.php
+.nested-fields
+  .form-group
+    .form-inputs
+      .col-sm-3
+        = f.input :type, collection: Question::TYPES
+      .col-sm-9
+        = f.input :value
+  = link_to_remove_association "remove question", f, :class => "btn btn-default"
