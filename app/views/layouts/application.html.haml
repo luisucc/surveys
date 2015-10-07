@@ -14,3 +14,7 @@
       .container
         = render 'layouts/messages'
         = yield
+  :javascript
+    $(document).ready(function() {
+      $.material.init();
+    });

@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require material
+//= require ripples
 //= require cocoon
 //= require bootstrap-sprockets
 //= require_tree .

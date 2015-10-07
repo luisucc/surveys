@@ -1,8 +1,8 @@
 - if user_signed_in?
-  %li= link_to 'Edit account', edit_user_registration_path
-  %li= link_to 'Sign out', destroy_user_session_path, :method=>'delete'
+  %li{:class => active_class(edit_user_registration_path)}= link_to 'Edit account', edit_user_registration_path
+  %li{:class => active_class(destroy_user_session_path)}= link_to 'Sign out', destroy_user_session_path, :method=>'delete'
 - else
-  %li= link_to 'Sign in', new_user_session_path
-  %li= link_to 'Sign up', new_user_registration_path
+  %li{:class => active_class(new_user_session_path)}= link_to 'Sign in', new_user_session_path
+  %li{:class => active_class(new_user_registration_path)}= link_to 'Sign up', new_user_registration_path
 - if user_signed_in?
-  %li= link_to 'Users', users_path
+  %li{:class => active_class(users_path)}= link_to 'Users', users_path
