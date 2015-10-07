@@ -1,7 +1,3 @@
-$(function() {
-    $.material.init();
-});
-
 (function(){
     $(window).scroll(function () {
         var top = $(document).scrollTop();

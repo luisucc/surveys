@@ -36,7 +36,7 @@ main {
   background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
+  margin-top: 60px; // accommodate the navbar
   }
 section {
   @extend .row;
@@ -66,6 +66,10 @@ section {
 .authform fieldset {
   @extend .well;
 }
+
+.alert {
+  margin-top: 20px;
+}
 #error_explanation:not(:empty) {
   @extend .alert;
   @extend .alert-danger;
@@ -91,12 +95,9 @@ section {
   background-color: transparent;
   background-image: none;
   border: 0px solid transparent;
-  /* border-radius: 4px; */
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0);
-  /* -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; */
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  /* transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; */
 }
 
 .form-control:focus {
@@ -105,3 +106,33 @@ section {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
 }
+
+// Main section
+
+main {
+  padding-right: 0;
+  padding-left: 0;
+  a:hover{
+    color: black !important;
+    background-color: transparent !important;
+  }
+
+  .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    min-height: 100px;
+  }
+
+  .header-panel {
+    position: relative;
+  }
+
+  .header-panel h2, h4 {
+    position: absolute;
+    line-height: 4;
+    bottom: -25%;
+  }
+}
+
+
+

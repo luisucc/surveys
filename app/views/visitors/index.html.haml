@@ -1,7 +1,15 @@
+- content_for :title, "Welcome"
+- content_for :message, "Create surveys with Awesome Surveys"
+
 %h2 Welcome
-%h4 Easily create surveys with Awesome Surveys
-%i.icon.icon-material-favorite
-%p
-  = link_to 'Users:', users_path
-  = User.count
-  registered
+.row
+  .col-xs-9
+    .well
+      %h2 Awesome Surveys
+      %p Create surveys with Awesome Surveys
+  .col-xs-3
+    .well
+      %p
+        = link_to 'Users:', users_path
+        = User.count
+        registered

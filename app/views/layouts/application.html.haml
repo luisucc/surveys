@@ -14,7 +14,8 @@
       .container
         = render 'layouts/messages'
         = yield
-  :javascript
-    $(document).ready(function() {
-      $.material.init();
-    });
+    = render 'devise/registrations/cancel_my_account' if current_page?(edit_user_registration_path)
+    :javascript
+      $(function() {
+        $.material.init();
+      });

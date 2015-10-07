@@ -23,8 +23,7 @@
       .form-group
         = f.password_field :current_password, class: 'form-control floating-label', placeholder: 'current confirmation'
     = f.submit 'Update', :class => 'button right'
-.authform
+
   %h3 Cancel Account
-  %form
-    %p Unhappy? We'll be sad to see you go.
-    = button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button right'
+  %p Unhappy? We'll be sad to see you go.
+  %button.button.right.btn-material-red-300{"data-target" => "#complete-dialog", "data-toggle" => "modal"} Cancel my account
