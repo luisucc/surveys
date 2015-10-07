@@ -1,13 +1,12 @@
 .container
-  .row
-    %h3 Users
-    .column
-      %table.table
-        %thead
+  %h2 Users
+  .well
+    %table.table.table-striped.table-hover
+      %thead
+        %tr
+          %th Name
+          %th Email
+      %tbody
+        - @users.each do |user|
           %tr
-            %th Name
-            %th Email
-        %tbody
-          - @users.each do |user|
-            %tr
-              = render user
+            = render user
