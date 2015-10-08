@@ -8,3 +8,8 @@
         = f.input :value
       .col-sm-2
         = link_to_remove_association "remove question", f, :class => "btn btn-material-red-200"
+  #candidates
+    = f.simple_fields_for :candidates do |candidate|
+      = render 'candidate_fields', :f => candidate
+    .links
+      = link_to_add_association 'add candidate', f, :candidates

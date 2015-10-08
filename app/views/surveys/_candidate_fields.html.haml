@@ -1,0 +1,6 @@
+.nested-fields
+  .form-inline
+    %b Candidate
+    = f.input :value, placeholder: 'value the candidate', label: false
+    = link_to_remove_association f, class: 'btn btn-default btn-xs' do
+      .glyphicon.glyphicon-remove
