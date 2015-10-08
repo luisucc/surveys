@@ -1,5 +1,5 @@
 .row
-  .col-sm-9
+  .col-sm-12.col-md-9
     %h2= @survey.name
 
     %h4 Description:
@@ -10,13 +10,13 @@
     - @survey.questions.each do |question|
       .well
         .row
-          .col-sm-10
+          .col-sm-10.col-md-10
             = question.value
-          .col-sm-2.text-right
+          .col-sm-2.col-md-2.text-right
             %span.badge.well-material-blue-400
               = question.type
-  .col-sm-3
+  .hidden-xs.hidden-sm.col-md-3
     -# You can make a tree
-= link_to 'Edit', edit_survey_path(@survey)
-\|
-= link_to 'Back', surveys_path
+= link_to 'Edit', edit_survey_path(@survey), :class => "btn btn-default"
+\
+= link_to 'Back', surveys_path, :class => "btn btn-default"

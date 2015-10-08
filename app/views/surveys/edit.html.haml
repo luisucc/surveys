@@ -1,7 +1,7 @@
 %h2 Editing survey
-.well
-  = render 'form'
 
-  = link_to 'Show', @survey
-  \|
-  = link_to 'Back', surveys_path
+= render 'form'
+
+= link_to 'Show', @survey, :class => "btn btn-default"
+\
+= link_to 'Back', surveys_path, :class => "btn btn-default"
